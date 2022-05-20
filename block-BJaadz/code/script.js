@@ -32,7 +32,7 @@ allHrs.forEach ((hr) => {
 
 // Change the 'border-radius' of all the hr to "5px" using array.
 allHrs.forEach ((hr) => {
-  hr.style.border = "5px solid tomato"
+  hr.style.borderRadius = "5px"
 } )
 
 // Change the alignment of the heading(h1) to center.
@@ -42,7 +42,7 @@ heading.style.textAlign = "center"
 heading.style.fontSize = '3rem'
 
 // Change the border of hr with class 'image' to `2px solid purple`.
-document.querySelectorAll('.image').forEach ((hr) => {
+document.querySelectorAll('hr.image').forEach ((hr) => {
   hr.style.border = "2px solid purple"
 } )
 
@@ -61,13 +61,11 @@ let para = document.createElement('p')
 para.innerText = "querySelector returns an element you can maupulate but querySelectorAll returns the collection of elements in array kind of structure."
 
 // Remove all the elements from box 1
-rm = document.querySelector('hr')
-rm.remove()
-rm = document.querySelector('hr')
-rm.remove()
+let box1 = document.querySelector('.one')
+box1.innerHTML = ""
 
 // Replace all the elements inside box 1 with the para (you created above)
-document.querySelector('.one').append(para)
+box1.append(para)
 
 /* Walking the DOM
 Do the following after selecting box 16 and storing in variable named box16
@@ -105,9 +103,9 @@ box2P.innerText = "Append inserts as last child"
 document.querySelector('.two').append(box2P)
 
 // Select box 3 and prepend a new paragraph element with content "Prepend inserts as first child" just before hr element.
-let box3P = document.createElement('p')
-box3P.innerText = "Prepend inserts as first child" 
-document.querySelector('.three').prepend(box3P)
+let text = document.createElement('p')
+text.innerText = "Prepend inserts as first child" 
+document.querySelector('.three').prepend(text)
 
 // Change the border of box 4 to '1px solid black'
 document.querySelector('.four').style.border = "1px solid black"
@@ -171,18 +169,17 @@ let imgElm = document.createElement('img')
 imgElm.src = `https://images.unsplash.com/photo-1592500595497-d1f52a40b207?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80`
 
 // Select the box 7 using class seven
-document.querySelector('.seven')
+let box7 =document.querySelector('.seven')
 
 // Remove all the elements form box seven
-// document.querySelector('.seven').remove()
+box7.innerHTML = ""
 
 // Append the imgElm to the box no 7
-document.querySelector('.seven').append (imgElm)
+box7.append (imgElm)
 
 // Change the width and height of the image to `100%`
-//      imgElm.width = '100%'
-
-//      imgElm.height = '100%'
+imgElm .style.width = '100%'
+imgElm.style.height = '100%'
 
 // Select the box 5 using class five
 document.querySelector('.five')
