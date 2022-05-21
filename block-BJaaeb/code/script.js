@@ -6,6 +6,13 @@ default value to be "text" and return the input element inside label. (create it
 */
 
 // Your code goes here
+let label = document.createElement('label')
+let type = document.createElement('input')
+
+function createInputElm  (label , type = "text") {
+  lab.append(type)
+  type.type = '${}' 
+}
 
 // TEST
 createInputElm('Your name'); //<label>Your name: <input type="text"></label>
@@ -22,6 +29,16 @@ createInputElm('Your age', 'number'); //<label>Your age: <input type="number"></
 // 3. Create a function named `createList` that accept and array of data like ['Mango', 'Apple', 'Banana'] and returns
 // the html for the link like <ul> <li>Mango</li>  <li>Apple</li>  <li>Banana</li> </ul>
 // Your code goes here
+
+function creatList (arr) {
+  let ul = document.createElement('ul') ; 
+  for (let i = 0; i < arr.length; i++) { 
+    let li = document.createElement('li')
+    li.innerText = arr[i]
+    ul.append (li) ; 
+  } 
+  console.log(ul) ;
+}
 
 // TEST
 createList(['ALABAMA', 'ALASKA', 'HAWAII', 'KENTUCKY']);
@@ -40,6 +57,25 @@ createList(['Afghanistan', 'Antarctica', 'Congo', 'Estonia']);
 */
 
 // Your code goes here
+function createTodoList (obj) {
+  let object = obj
+  let ul = document.createElement('ul') ; 
+  for (let i = 0; i < object.length; i++) {
+    let li = document.createElement('li') ;
+    let p = document.createElement('p')
+    p.innerText = object[i].name
+    let input = document.createElement('input')
+    input.type = 'checkbox'
+    input.name = ""
+    input.id = ""
+    let span = document.createElement('span')
+    span.innerText = 'X'
+    li.append(p , input , span) 
+     ul. append (li)
+  }
+   
+  console.log(ul)
+}
 
 // TEST
 createTodoList([
