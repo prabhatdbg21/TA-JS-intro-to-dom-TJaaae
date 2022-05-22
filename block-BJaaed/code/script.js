@@ -119,6 +119,22 @@ let allBooks = {
 
 
 
-
+let ul = document.querySelector ("ul");
+allBooks.books.forEach((char) => {
+    let li = document.createElement ("li");
+    let img = document.createElement ("img");
+    img.src = char.image ;
+    let h2 = document.createElement ("h2");
+    h2.innerText = char.subtitle ;
+    let p = document.createElement ("p");
+    p.innerText = `author: ${char.author}`
+    let button = document.createElement ("a");
+    button.innerText = 'Buy New'
+        
+    li.append(img ,h2 , p , button);
+        
+    ul.append(li);
+      });
+  
 
 
