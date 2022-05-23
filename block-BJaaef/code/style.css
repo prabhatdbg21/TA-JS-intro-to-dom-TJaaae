@@ -188,14 +188,14 @@ p{
   font-size: 0.9rem;
   text-align: center;
 }
-button{
+a{
+  display: inline-block;
   width :  100%;
   background-color: #e7edfd;
   border-radius: 5px;
   border: hidden;
   padding: 0.5rem 0;
-}
-button,a {
   color : #6f85ff;
+  text-align: center;
 }
 

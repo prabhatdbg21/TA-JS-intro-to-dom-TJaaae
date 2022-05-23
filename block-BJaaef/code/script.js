@@ -15,14 +15,12 @@ got.houses.forEach((house) => {
 
         let p = document.createElement('p');
         p.innerText = peoples.description;
-
-        let button = document.createElement('button');
         
         let a = document.createElement('a');
+        a.innerText = `Learn More!` ;
         a.href = peoples.wikiLink;
-        button.append (a)
 
-        article.append (div ,p , button);
+        article.append (div ,p , a);
 
         bigDiv.append (article)
     });
